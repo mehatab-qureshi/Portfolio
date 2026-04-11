@@ -30,8 +30,9 @@ nav {
 
 .logo {
   color: white;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .logo span {
@@ -56,11 +57,11 @@ nav {
 
 .nav-container .links a {
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   color: white;
   margin: 0 20px;
   text-decoration: none;
-  font-weight: 550;
+  font-weight: 450;
   transition: 0.3s linear;
 }
 
@@ -165,9 +166,13 @@ section {
 
 .content h1 {
   font-size: clamp(1rem, 1rem + 5vw, 3.2rem);
+  margin: 12px 0px;
 }
 
-.content h1 span {
+.content h1 .breakline {
+  display: block;
+}
+.content h1 .name {
   color: #077b32;
   text-shadow: 0 0 10px #077b32;
 }
@@ -182,11 +187,6 @@ section {
   text-shadow: 0 0 10px #077b32;
 }
 
-.content p {
-  font-size: clamp(0.4rem, 0.2rem + 9vw, 1.5rem);
-  margin: 10px 0px;
-}
-
 .social-links i {
   display: inline-flex;
   justify-content: center;
@@ -197,7 +197,7 @@ section {
   border: 0.2rem solid #077b32;
   border-radius: 50%;
   color: #077b32;
-  margin: 0 15px;
+  margin: 15px 15px;
   font-size: 1.5rem;
   transition: 0.2s linear;
 }
@@ -209,21 +209,25 @@ section {
   filter: drop-shadow(0 0 10px #077b32);
 }
 
-.content button {
-  width: 50%;
+.content .butn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+
+  width: 27%;
   height: 6vh;
-  margin: 30px;
+  margin: 35px 10px;
   background-color: #077b32;
   color: white;
-  border: none;
-  outline: none;
-  font-size: 120%;
-  font-weight: 700;
-  border-radius: 5px;
+  font-size: 150%;
+  font-weight: 500;
+  border-radius: 40px;
   transition: 0.2s linear;
 }
 
-.content button:hover {
+.content .butn:hover {
   scale: 1.1;
   color: #077b32;
   border: 2px solid #077b32;
