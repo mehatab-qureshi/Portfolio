@@ -9,15 +9,23 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 nav {
   width: 100%;
   height: 10vh;
   position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -117,7 +125,9 @@ nav {
 
 section {
   width: 100%;
-  height: 90vh;
+  min-height: 100vh;
+  padding-top: 5vh;
+  box-sizing: border-box;
 }
 
 .main-container {
@@ -191,8 +201,8 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: transparent;
   border: 0.2rem solid #077b32;
   border-radius: 50%;
@@ -213,7 +223,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
   text-decoration: none;
 
   width: 27%;
@@ -228,6 +238,7 @@ section {
 }
 
 .content .butn:hover {
+  gap: 10px;
   scale: 1.1;
   color: #077b32;
   border: 2px solid #077b32;
@@ -287,7 +298,85 @@ section {
     width: 80%;
   }
 
-  .main-container button {
+  .main-container .butn {
     margin-top: 15px;
   }
+}
+
+#about {
+  color: white;
+}
+
+.aboutBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6vh;
+  margin-top: 7vh;
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.about-container span {
+  color: #077b32;
+}
+
+.abtImg {
+  background-color: whitesmoke;
+  width: 33%;
+  border-radius: 5%;
+  overflow: hidden;
+  box-shadow: 0 0 50px #077b32;
+}
+
+.abtImg img {
+  width: 100%;
+  height: auto;
+   object-fit: cover;
+}
+
+.abtInfo {
+  width: 39%;
+  height: 40vh;
+  border: 2px solid red;
+}
+
+.abtInfo h2{
+  font-size: 2.3rem;
+  color: white;
+}
+
+.abtInfo h3{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.abtInfo .intro{
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.abtInfo .contact-info{
+  font-size: 1.3rem;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 4rem;
+}
+
+.about-button a{
+  padding: 19px 20px;
+  background: #077b32;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
 }
