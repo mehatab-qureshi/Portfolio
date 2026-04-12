@@ -343,7 +343,6 @@ section {
 .abtInfo {
   width: 39%;
   height: 40vh;
-  border: 2px solid red;
 }
 
 .abtInfo h2{
@@ -352,8 +351,8 @@ section {
 }
 
 .abtInfo h3{
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: white;
   margin-bottom: 20px;
 }
@@ -373,10 +372,33 @@ section {
 }
 
 .about-button a{
-  padding: 19px 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 25%;
+  height: 7vh ;
+  font-size: 1.5rem;
   background: #077b32;
   color: white;
-  border-radius: 30px;
+  border-radius: 10px;
   text-decoration: none;
   transition: 0.3s;
+}
+
+.about-button i{
+  font-size: 15px;
+   position: relative;
+  top: 1px;
+}
+
+
+.about-button a:hover{
+   gap: 10px;
+  scale: 1.1;
+  color: #077b32;
+  border: 2px solid #077b32;
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px #077b32;
 }
