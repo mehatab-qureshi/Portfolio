@@ -26,6 +26,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
+  background-color: black;
 }
 
 .nav-container {
@@ -125,9 +126,10 @@ nav {
 
 section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   padding-top: 5vh;
   box-sizing: border-box;
+  border: 2px solid red;
 }
 
 .main-container {
@@ -305,6 +307,7 @@ section {
 
 #about {
   color: white;
+  border: 2px solid red;
 }
 
 .aboutBox {
@@ -337,7 +340,7 @@ section {
 .abtImg img {
   width: 100%;
   height: auto;
-   object-fit: cover;
+  object-fit: cover;
 }
 
 .abtInfo {
@@ -345,40 +348,40 @@ section {
   height: 40vh;
 }
 
-.abtInfo h2{
+.abtInfo h2 {
   font-size: 2.3rem;
   color: white;
 }
 
-.abtInfo h3{
+.abtInfo h3 {
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
   margin-bottom: 20px;
 }
 
-.abtInfo .intro{
+.abtInfo .intro {
   font-size: 1.3rem;
   color: white;
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.abtInfo .contact-info{
+.abtInfo .contact-info {
   font-size: 1.3rem;
   display: flex;
   gap: 25px;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
-.about-button a{
+.about-button a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   width: 25%;
-  height: 7vh ;
-  font-size: 1.5rem;
+  height: 7vh;
+  font-size: 1.7rem;
   background: #077b32;
   color: white;
   border-radius: 10px;
@@ -386,19 +389,23 @@ section {
   transition: 0.3s;
 }
 
-.about-button i{
+.about-button i {
   font-size: 15px;
-   position: relative;
+  position: relative;
   top: 1px;
 }
 
-
-.about-button a:hover{
-   gap: 10px;
+.about-button a:hover {
+  gap: 10px;
   scale: 1.1;
   color: #077b32;
   border: 2px solid #077b32;
   background-color: transparent;
   font-weight: 700;
   box-shadow: 0 0 40px #077b32;
+}
+
+#skills {
+  color: white;
+  border: 2px solid red;
 }
