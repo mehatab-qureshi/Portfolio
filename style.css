@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: black;
+  padding-top: 10vh;
 }
 
 html {
@@ -28,10 +29,6 @@ nav {
   z-index: 1000;
   background-color: black;
   border: 2px solid yellow;
-}
-
-#home{
-  border: 5px solid purple;
 }
 
 .nav-container {
@@ -131,9 +128,12 @@ nav {
 
 section {
   width: 100%;
-  min-height: 100vh;
-  padding-top: 13vh;
-  box-sizing: border-box;
+  height: calc(100vh - 10vh);
+  scroll-margin-top: 10vh;
+}
+
+#home {
+  border: 5px solid purple;
 }
 
 .main-container {
@@ -142,7 +142,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* border: 2px solid green; */
+  /* border: 5px solid green; */
 }
 
 .main-container .image {
@@ -312,13 +312,15 @@ section {
 
 #about {
   color: white;
-  border: 2px solid red;
+  border: 2px solid white;
 }
 
 .about-container h1 {
   font-size: 3.4rem;
   text-align: center;
   letter-spacing: 1px;
+  position: relative;
+  top: 30px;
 }
 
 .aboutBox {
@@ -326,7 +328,8 @@ section {
   justify-content: center;
   align-items: center;
   gap: 6vh;
-  margin-top: 7vh;
+  margin-top: 11vh;
+  /* border: 2px solid red; */
 }
 
 .about-container span {
@@ -411,6 +414,7 @@ section {
 
 #skills {
   color: white;
+  border: 2px dotted white;
 }
 
 #skills h1 {
