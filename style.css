@@ -545,3 +545,96 @@ section {
 
 /* Work section */
 
+#work {
+  color: white;
+}
+
+#work h1 {
+  font-size: 3.4rem;
+  text-align: center;
+}
+
+/* GRID */
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* CARD */
+.work-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  aspect-ratio: 1 / 1; /* square */
+}
+
+/* IMAGE */
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.work-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;  /* 👈 tera 75% */
+  
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+
+  transform: translateY(25%); /* 👈 initial niche */
+  transition: 0.5s ease; /* smooth */
+  text-align: center;
+}
+
+/* HOVER */
+.work-card:hover .work-overlay {
+  transform: translateY(0);
+}
+
+/* TEXT */
+.work-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.work-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #077b32;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons a {
+  padding: 8px 15px;
+  background: #077b32;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: transparent;
+  border: 1px solid #077b32;
+  color: #077b32;
+}
