@@ -552,6 +552,9 @@ section {
 #work h1 {
   font-size: 3.4rem;
   text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  top: 30px;
 }
 
 /* GRID */
@@ -560,60 +563,71 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 80%;
-  margin: 50px auto;
+  margin: 90px auto;
 }
 
 /* CARD */
 .work-card {
+  /* border: 2px solid red; */
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  aspect-ratio: 1 / 1; /* square */
+  /* aspect-ratio: 1 / 1; square */
+  height: 42vh;
+  box-shadow: 0 0 25px #3c8757;
 }
 
 /* IMAGE */
 .work-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* OVERLAY */
 .work-overlay {
+  /* border: 2px solid green; */
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 75%;  /* 👈 tera 75% */
-  
+  height: 45%; /* 👈 tera 75% */
+
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(10px);
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
 
-  transform: translateY(25%); /* 👈 initial niche */
+  transform: translateY(65%); /* 👈 initial niche */
   transition: 0.5s ease; /* smooth */
   text-align: center;
+  overflow: hidden;
 }
 
 /* HOVER */
 .work-card:hover .work-overlay {
   transform: translateY(0);
+  height: 70%;
 }
 
 /* TEXT */
 .work-overlay h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  color: white;
+  background-color: #077b32;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  padding-top: 12px;
 }
 
 .work-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+  font-size: 1.7rem;
+  margin-top: 45px;
   color: #077b32;
 }
 
@@ -629,12 +643,133 @@ section {
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   transition: 0.3s;
+  width: 10vh;
+  margin-top: 15px;
 }
 
 .buttons a:hover {
   background: transparent;
   border: 1px solid #077b32;
   color: #077b32;
+}
+
+#contact {
+  color: white;
+  /* border: 2px solid green; */
+}
+
+#contact h1 {
+  font-size: 3.4rem;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  top: 30px;
+}
+
+/* MAIN CONTAINER */
+.contact-container {
+  width: 80%;
+  margin: 90px auto;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  width: 40%;
+  /* border: 2px solid red; */
+  padding-top: 90px;
+}
+
+.contact-info h2 {
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.contact-info h2 span {
+  color: #077b32;
+}
+
+.contact-info p {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.info-box p {
+  margin-top: 8px 0;
+}
+
+/* RIGHT SIDE FORM */
+.contact-form {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  /* border: 2px solid red; */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  text-transform: capitalize;
+  padding: 25px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1.3rem;
+}
+
+.contact-form button {
+  padding: 25px;
+  background: #077b32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: transparent;
+  border: 1px solid #077b32;
+  color: #077b32;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.footerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6vh;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border-top: 1px solid #141414;
+  opacity: 0.7;
 }
