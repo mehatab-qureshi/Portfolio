@@ -671,7 +671,7 @@ section {
 /* MAIN CONTAINER */
 .contact-container {
   width: 80%;
-  margin: 90px auto;
+  margin: 100px auto;
   display: flex;
   gap: 40px;
   justify-content: space-between;
@@ -722,12 +722,16 @@ section {
 
 .contact-form input,
 .contact-form textarea {
-  text-transform: capitalize;
   padding: 25px;
   border: none;
   outline: none;
   border-radius: 6px;
   font-size: 1.3rem;
+}
+
+.contact-form .nameIp,
+.textareaIp {
+  text-transform: capitalize;
 }
 
 .contact-form button {

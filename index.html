@@ -435,10 +435,27 @@
 
         <!-- RIGHT FORM -->
         <div class="contact-form">
-          <form>
-            <input type="text" placeholder="Enter Your Name" required />
-            <input type="email" placeholder="Enter Your Email" required />
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+          <form id="contact-form">
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Enter Your Name"
+              required
+              class="nameIp"
+            />
+            <input
+              type="email"
+              name="from_email"
+              placeholder="Enter Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+              class="textareaIp"
+            ></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
@@ -450,7 +467,8 @@
         <!-- Footer Text -->
         <div class="footerText">
           <p>
-            © 2026 Mehatab Qureshi - All Rights Reserved. Made with ❤️ and passion
+            © 2026 Mehatab Qureshi - All Rights Reserved. Made with ❤️ and
+            passion
           </p>
         </div>
       </footer>
@@ -460,6 +478,7 @@
     <script>
       AOS.init({ offset: 0 });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   </body>
   <script src="script.js"></script>
 </html>
