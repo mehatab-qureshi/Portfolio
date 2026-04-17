@@ -36,15 +36,33 @@ function typeWriter() {
   }
 }
 
-function eraseText(){
-    if(textElements.innerHTML.length>0){
-        textElements.innerHTML = textElements.innerHTML.slice(0,-1)
-        setTimeout(eraseText,50)
-    }else{
-        textIndex = (textIndex+1)%texts.length
-        characterIndex=0
-        setTimeout(typeWriter,500)
-    }
+function eraseText() {
+  if (textElements.innerHTML.length > 0) {
+    textElements.innerHTML = textElements.innerHTML.slice(0, -1);
+    setTimeout(eraseText, 50);
+  } else {
+    textIndex = (textIndex + 1) % texts.length;
+    characterIndex = 0;
+    setTimeout(typeWriter, 500);
+  }
 }
 
 window.onload = typeWriter;
+
+emailjs.init("i8y6oz1rFMzd9c3Tr");
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm("service_62ln97c", "template_e8o57ta", this, "i8y6oz1rFMzd9c3Tr")
+    .then(() => {
+      alert("Message sent successfully ✅");
+      form.reset();
+    })
+    .catch(() => {
+      alert("Failed ❌ Try again");
+    });
+});

@@ -128,7 +128,8 @@ nav {
 
 section {
   width: 100%;
-  height: calc(100vh - 10vh);
+  min-height: calc(100vh - 10vh);
+  height: auto;
   scroll-margin-top: 10vh;
 }
 
@@ -140,6 +141,7 @@ section {
   width: 100%;
   height: 100%;
   display: flex;
+  min-height: calc(100vh - 10vh);
   justify-content: space-evenly;
   align-items: center;
   /* border: 5px solid green; */
@@ -189,6 +191,7 @@ section {
 .content h1 .breakline {
   display: block;
 }
+
 .content h1 .name {
   color: #077b32;
   text-shadow: 0 0 10px #077b32;
@@ -233,12 +236,13 @@ section {
   gap: 7px;
   text-decoration: none;
 
-  width: 27%;
+  width: auto;
+  padding: 0 40px;
   height: 6vh;
   margin: 35px 10px;
   background-color: #077b32;
   color: white;
-  font-size: 150%;
+  font-size: 1.5rem;
   font-weight: 500;
   border-radius: 40px;
   transition: 0.2s linear;
@@ -254,65 +258,10 @@ section {
   box-shadow: 0 0 40px #077b32;
 }
 
-@media (max-width: 884px) {
-  nav .logo {
-    position: absolute;
-    top: 16px;
-    left: 15px;
-    font-size: 1.5rem;
-  }
-
-  .main-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-container .links {
-    display: none;
-  }
-
-  .hamburg,
-  .cancel {
-    display: block;
-    font-size: 2.4rem;
-  }
-
-  .main-container .content {
-    width: 80%;
-  }
-
-  .social-links i {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.5rem;
-  }
-
-  .main-container .image {
-    z-index: -1;
-    width: 50%;
-    height: 60%;
-  }
-}
-
-@media (max-width: 440px) {
-  .main-container .image {
-    width: 50%;
-    height: 60%;
-    margin-bottom: 30px;
-  }
-
-  .main-container .content {
-    width: 80%;
-  }
-
-  .main-container .butn {
-    margin-top: 15px;
-  }
-}
-
 #about {
   color: white;
   /* border: 2px solid white; */
+  padding-bottom: 40px;
 }
 
 .about-container h1 {
@@ -352,7 +301,7 @@ section {
 
 .abtInfo {
   width: 39%;
-  height: 40vh;
+  height: auto;
 }
 
 .abtInfo h2 {
@@ -379,6 +328,7 @@ section {
   display: flex;
   gap: 25px;
   margin-bottom: 4rem;
+  flex-wrap: wrap;
 }
 
 .about-button a {
@@ -386,7 +336,8 @@ section {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 25%;
+  /* width: 25%; */
+  padding: 0 40px;
   height: 7vh;
   font-size: 1.7rem;
   background: #077b32;
@@ -415,6 +366,7 @@ section {
 #skills {
   color: white;
   /* border: 2px dotted white; */
+  padding-bottom: 40px;
 }
 
 #skills h1 {
@@ -451,7 +403,7 @@ section {
 
 .skill-box {
   background-color: #077b32;
-  padding: 35px;
+  padding: 35px 25px;
   height: auto;
   text-align: center;
   border-radius: 15px;
@@ -478,21 +430,14 @@ section {
   box-shadow: 0 0 40px #077b32;
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.skill-box:hover i {
+  color: #077b32;
 }
 
 /* Education section */
 #education {
   color: white;
+  padding-bottom: 40px;
 }
 
 #education h1 {
@@ -547,6 +492,7 @@ section {
 
 #work {
   color: white;
+  padding-bottom: 40px;
 }
 
 #work h1 {
@@ -620,7 +566,7 @@ section {
   background-color: #077b32;
   width: 100%;
   height: 72px;
-  position: fixed;
+  position: absolute;
   top: 0;
   padding-top: 12px;
 }
@@ -647,6 +593,7 @@ section {
   transition: 0.3s;
   width: 10vh;
   margin-top: 15px;
+  text-align: center;
 }
 
 .buttons a:hover {
@@ -658,6 +605,10 @@ section {
 #contact {
   color: white;
   /* border: 2px solid green; */
+  position: relative;
+  height: auto;
+  min-height: calc(100vh - 10vh);
+  padding-bottom: 7vh;
 }
 
 #contact h1 {
@@ -671,7 +622,7 @@ section {
 /* MAIN CONTAINER */
 .contact-container {
   width: 80%;
-  margin: 100px auto;
+  margin: 100px auto 40px;
   display: flex;
   gap: 40px;
   justify-content: space-between;
@@ -751,18 +702,6 @@ section {
   color: #077b32;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 100%;
-  }
-}
-
 .footerText {
   display: flex;
   justify-content: center;
@@ -776,4 +715,445 @@ section {
   letter-spacing: 1px;
   border-top: 1px solid #141414;
   opacity: 0.7;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* 
+@media (max-width: 884px) {
+  nav .logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-container .links {
+    display: none;
+  }
+
+  .hamburg,
+  .cancel {
+    display: block;
+    font-size: 2.4rem;
+  }
+
+  .main-container .content {
+    width: 80%;
+  }
+
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .main-container .image {
+    z-index: -1;
+    width: 50%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 440px) {
+  .main-container .image {
+    width: 50%;
+    height: 60%;
+    margin-bottom: 30px;
+  }
+
+  .main-container .content {
+    width: 80%;
+  }
+
+  .main-container .butn {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+} */
+
+/* ===================== RESPONSIVE: TABLET (769px - 1024px) ===================== */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-container .image {
+    width: 350px;
+    height: 60vh;
+  }
+
+  .abtImg {
+    width: 40%;
+  }
+
+  .abtInfo {
+    width: 50%;
+  }
+}
+
+/* ===================== RESPONSIVE: TABLET (max 884px) ===================== */
+@media (max-width: 884px) {
+  nav .logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .nav-container .links {
+    display: none;
+  }
+
+  .hamburg,
+  .cancel {
+    display: block;
+    font-size: 2.4rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .main-container .image {
+    width: 55%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .main-container .content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .content .butn {
+    margin-top: 20px;
+  }
+
+  .aboutBox {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+    gap: 30px;
+  }
+
+  .abtImg {
+    width: 65%;
+  }
+
+  .abtInfo {
+    width: 85%;
+    height: auto;
+    text-align: center;
+  }
+
+  .abtInfo .contact-info {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .about-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-container .skills-wrapper {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .edu-card {
+    width: 85%;
+  }
+
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 80px auto 40px;
+  }
+
+  .contact-info {
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+/* ===================== RESPONSIVE: MOBILE (max 480px) ===================== */
+@media (max-width: 480px) {
+  .about-container h1,
+  #skills h1,
+  #education h1,
+  #work h1,
+  #contact h1 {
+    font-size: 2.4rem;
+    top: 20px;
+  }
+
+  .main-container {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .main-container .image {
+    width: 65%;
+    margin-top: 20px;
+  }
+
+  .main-container .content {
+    width: 95%;
+  }
+
+  .content h1 {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+  }
+
+  .content .typewriter {
+    font-size: clamp(1.1rem, 5vw, 1.8rem);
+  }
+
+  .content .butn {
+    font-size: 1.2rem;
+    height: 5vh;
+    margin: 20px 5px;
+  }
+
+  .social-links i {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+    margin: 10px 8px;
+  }
+
+  .abtImg {
+    width: 80%;
+  }
+
+  .abtInfo {
+    width: 95%;
+  }
+
+  .abtInfo h2 {
+    font-size: 1.8rem;
+  }
+
+  .abtInfo h3 {
+    font-size: 1.2rem;
+  }
+
+  .abtInfo .intro {
+    font-size: 1.1rem;
+  }
+
+  .abtInfo .contact-info {
+    font-size: 1.1rem;
+  }
+
+  .about-button a {
+    font-size: 1.4rem;
+    height: 6vh;
+  }
+
+  .skills-container {
+    margin-top: 60px;
+  }
+
+  .skills-container .skills-wrapper {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .skill-box {
+    padding: 15px 8px;
+    margin: 4px;
+    border-radius: 10px;
+  }
+
+  .skill-box i {
+    font-size: 28px;
+  }
+
+  .skill-box p {
+    font-size: 1.1rem;
+  }
+
+  .edu-container {
+    margin-top: 60px;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .edu-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .edu-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .edu-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .edu-card p {
+    font-size: 1.1rem;
+  }
+
+  .work-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 60px auto;
+    gap: 20px;
+  }
+
+  .work-card {
+    height: 35vh;
+  }
+
+  .work-overlay h2 {
+    font-size: 1.5rem;
+    height: 55px;
+    padding-top: 10px;
+  }
+
+  .work-overlay p {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+
+  .buttons a {
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    margin: 60px auto 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-info p {
+    font-size: 1.3rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 18px;
+    font-size: 1.1rem;
+  }
+
+  .contact-form button {
+    padding: 18px;
+    font-size: 1.2rem;
+  }
+
+  .footerText {
+    font-size: 0.9rem;
+    height: auto;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===================== RESPONSIVE: SMALL MOBILE (max 360px) ===================== */
+@media (max-width: 360px) {
+  .main-container .image {
+    width: 75%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-box p {
+    font-size: 1rem;
+  }
+
+  .work-container {
+    width: 95%;
+  }
+
+  .contact-container {
+    width: 95%;
+  }
+
+  .edu-card {
+    width: 100%;
+  }
+
+  .edu-card h2 {
+    font-size: 1.4rem;
+  }
 }
