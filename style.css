@@ -18,8 +18,9 @@ body {
 
 html {
   scroll-behavior: smooth;
-   /* font-size: 70%;
-  -webkit-text-size-adjust: 100%; */
+  /* font-size: 66%; */
+  font-size: 10.56px;
+  -webkit-text-size-adjust: 100%;
 }
 
 .nav-container .links a.active {
