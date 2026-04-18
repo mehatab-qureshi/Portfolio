@@ -18,8 +18,8 @@ body {
 
 html {
   scroll-behavior: smooth;
-   font-size: 70%;
-  -webkit-text-size-adjust: 100%;
+   /* font-size: 70%;
+  -webkit-text-size-adjust: 100%; */
 }
 
 .nav-container .links a.active {
@@ -69,7 +69,7 @@ nav {
   top: 10px;
   color: white;
   display: none;
-  font-size: clamp(2.5rem, 0.5rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 3rem);
 }
 
 .nav-container .links {
@@ -662,7 +662,7 @@ section {
 }
 
 .info-box p {
-  margin-top: 8px 0;
+  margin: 8px 0;
 }
 
 /* RIGHT SIDE FORM */
