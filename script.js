@@ -49,6 +49,7 @@ function eraseText() {
 
 window.onload = typeWriter;
 
+//EmailJS
 emailjs.init("i8y6oz1rFMzd9c3Tr");
 
 const form = document.getElementById("contact-form");
@@ -65,4 +66,31 @@ form.addEventListener("submit", function (e) {
     .catch(() => {
       alert("Failed ❌ Try again");
     });
+});
+
+//nav btn active
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-container .links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.clientHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
 });
