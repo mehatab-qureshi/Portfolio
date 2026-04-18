@@ -18,6 +18,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+  zoom: 1; /* yeh add karo */
+  -webkit-text-size-adjust: 100%;
 }
 
 .nav-container .links a.active {
