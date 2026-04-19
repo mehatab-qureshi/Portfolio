@@ -52,7 +52,7 @@ nav {
 
 .logo {
   color: white;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -152,7 +152,7 @@ section {
   width: 100%;
   height: 100%;
   display: flex;
-  min-height: calc(100vh - 10vh);  
+  min-height: calc(100vh - 10vh);
   justify-content: space-evenly;
   align-items: center;
   /* border: 5px solid green; */
@@ -225,7 +225,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 2.7rem;
-  height:2.7rem;
+  height: 2.7rem;
   background-color: transparent;
   border: 0.2rem solid #077b32;
   border-radius: 50%;
@@ -248,7 +248,6 @@ section {
   justify-content: center;
   gap: 7px;
   text-decoration: none;
- 
 
   width: auto;
   padding: 0 40px;
@@ -837,6 +836,14 @@ section {
   .abtInfo {
     width: 50%;
   }
+
+  .edu-card {
+    width: 80%;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
 }
 
 /* ===================== RESPONSIVE: TABLET (max 884px) ===================== */
@@ -845,7 +852,7 @@ section {
     position: absolute;
     top: 16px;
     left: 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .nav-container .links {
@@ -855,7 +862,7 @@ section {
   .hamburg,
   .cancel {
     display: block;
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .main-container {
@@ -865,9 +872,10 @@ section {
   }
 
   .main-container .image {
-    width: 55%;
+    width: 50%;
     height: auto;
     border-radius: 50%;
+    aspect-ratio: 1/1;
   }
 
   .main-container .content {
@@ -887,31 +895,31 @@ section {
   }
 
   .content .butn {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .aboutBox {
     flex-direction: column;
     align-items: center;
     margin-top: 8vh;
-    gap: 30px;
+    gap: 25px;
   }
 
   .abtImg {
-    width: 65%;
+    width: 60%;
   }
 
   .abtInfo {
     width: 85%;
-    height: auto;
+    /* height: auto; */
     text-align: center;
   }
 
-  .abtInfo .contact-info {
+  .abtInfo .contactInfo {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .about-button {
@@ -926,7 +934,7 @@ section {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 5px;
   }
 
   .edu-card {
@@ -942,7 +950,7 @@ section {
   .contact-container {
     flex-direction: column;
     width: 90%;
-    margin: 80px auto 40px;
+    margin: 60px auto 27px;
   }
 
   .contact-info {
@@ -963,7 +971,7 @@ section {
   #education h1,
   #work h1,
   #contact h1 {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     top: 20px;
   }
 
@@ -982,28 +990,29 @@ section {
   }
 
   .content h1 {
-    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    font-size: clamp(1.4rem, 6vw, 1.5rem);
   }
 
   .content .typewriter {
-    font-size: clamp(1.1rem, 5vw, 1.8rem);
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
   }
 
   .content .butn {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     height: 5vh;
-    margin: 20px 5px;
+    margin: 15px 5px;
+    padding: 0 25px;
   }
 
   .social-links i {
     width: 2.2rem;
     height: 2.2rem;
     font-size: 1rem;
-    margin: 10px 8px;
+    margin: 8px 6px;
   }
 
   .abtImg {
-    width: 80%;
+    width: 78%;
   }
 
   .abtInfo {
@@ -1011,38 +1020,39 @@ section {
   }
 
   .abtInfo h2 {
-    font-size: 1.8rem;
-  }
-
-  .abtInfo h3 {
     font-size: 1.2rem;
   }
 
-  .abtInfo .intro {
-    font-size: 1.1rem;
+  .abtInfo h3 {
+    font-size: 0.85rem;
   }
 
-  .abtInfo .contact-info {
-    font-size: 1.1rem;
+  .abtInfo .intro {
+    font-size: 0.8rem;
+  }
+
+  .abtInfo .contactInfo {
+    font-size: 0.85rem;
   }
 
   .about-button a {
-    font-size: 1.4rem;
-    height: 6vh;
+    font-size: 0.9rem;
+    height: 5vh;
+    padding: 0 20px;
   }
 
   .skills-container {
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
   .skills-container .skills-wrapper {
     width: 95%;
-    padding: 12px;
+    padding: 10px;
   }
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 5px;
   }
 
   .skill-box {
@@ -1052,40 +1062,40 @@ section {
   }
 
   .skill-box i {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .skill-box p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .edu-container {
-    margin-top: 60px;
-    gap: 20px;
+    margin-top: 50px;
+    gap: 15px;
     padding: 0 15px;
   }
 
   .edu-card {
     width: 100%;
-    padding: 18px;
+    padding: 14px;
   }
 
   .edu-card h2 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 
   .edu-card h3 {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 
   .edu-card p {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .work-container {
     grid-template-columns: 1fr;
     width: 90%;
-    margin: 60px auto;
+    margin: 55px auto;
     gap: 20px;
   }
 
@@ -1094,52 +1104,51 @@ section {
   }
 
   .work-overlay h2 {
-    font-size: 1.5rem;
-    height: 55px;
-    padding-top: 10px;
+    font-size: 1rem;
+    height: 42px;
+    padding-top: 8px;
   }
 
   .work-overlay p {
-    font-size: 1.3rem;
-    margin-top: 40px;
+    font-size: 0.9rem;
+    margin-top: 25px;
   }
 
   .buttons a {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
   }
 
   .contact-container {
-    margin: 60px auto 40px;
+    margin: 50px auto 27px;
   }
 
   .contact-info h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .contact-info p {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
 
   .contact-form input,
   .contact-form textarea {
-    padding: 18px;
-    font-size: 1.1rem;
+    padding: 13px;
+    font-size: 0.8rem;
   }
 
   .contact-form button {
-    padding: 18px;
-    font-size: 1.2rem;
+    padding: 13px;
+    font-size: 0.8rem;
   }
 
   .footerText {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     height: auto;
-    padding: 10px 15px;
-    text-align: center;
+    padding: 8px 15px;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -1149,16 +1158,32 @@ section {
     width: 75%;
   }
 
+  .main-container .content {
+    width: 100%;
+  }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-box p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .skill-box i {
+    font-size: 18px;
   }
 
   .work-container {
     width: 95%;
+  }
+
+  .work-card {
+    height: 30vh;
+  }
+
+  .abtImg {
+    width: 88%;
   }
 
   .contact-container {
@@ -1169,7 +1194,15 @@ section {
     width: 100%;
   }
 
+  .about-button a {
+    font-size: 0.85rem;
+  }
+
   .edu-card h2 {
-    font-size: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
   }
 }
