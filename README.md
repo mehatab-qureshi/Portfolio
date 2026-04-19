@@ -1,4 +1,4 @@
-<img width="1901" height="903" alt="portfolio" src="https://github.com/user-attachments/assets/69f7d3a5-a4d2-45f9-a2db-506f8914ed26" /># Mehatab Portfolio
+# Mehatab Portfolio
 
 🚀 Live Demo
 👉 [View Live Site](https://mehatab-qureshi.github.io/Portfolio/)
