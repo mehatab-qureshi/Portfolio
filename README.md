@@ -13,7 +13,7 @@ This is my personal developer portfolio website built to showcase my projects, s
 - HTML
 - CSS
 - JavaScript
-- 
+
 ✨ Features
 - Responsive design
 - Smooth scrolling
