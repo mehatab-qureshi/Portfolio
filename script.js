@@ -18,7 +18,7 @@ cancel.addEventListener("click", () => {
   navbar.classList.remove("active");
 });
 
-const texts = ["Fullstack Developer", "Software Developer"];
+const texts = ["Fullstack Developer", "Software Developer"];  //
 
 let speed = 100;
 const textElements = document.querySelector(".typewriter-text");
